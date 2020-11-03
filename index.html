@@ -1,1 +1,292 @@
-karmuazine
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="http://halfofpoint.github.io/karmuazine.com/images/header.jpg" />
+    <title>karmuazine</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="./css/flex.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'summer_fontlight';
+            src: url('summer_font_light-webfont.woff2') format('woff2'), url('summer_font_light-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'summer_fontlight', sans-serif;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 200vh;
+            padding: 0;
+            margin: 0;
+            /*  background: #2980b9;
+
+background: linear-gradient(to bottom, #2c3e50, #2980b9);
+*/
+        }
+
+        #mainContainer {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 150;
+        }
+
+        #bg {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("./images/birds_layer.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            position: fixed;
+            z-index: 0;
+        }
+
+        #girl {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("./images/birds_girl.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            z-index: 20;
+        }
+
+        #topLight {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("./images/birds_top_light.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            opacity: 0;
+        }
+
+        #bottom {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("./images/birds_bottom.png");
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: contain;
+            position: fixed;
+            bottom: 0;
+            z-index: 5;
+            opacity: 0;
+        }
+
+        #stars {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("./images/birds_stars.png");
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            position: fixed;
+            top: 100%;
+            z-index: 4;
+        }
+
+        header {
+            font-size: 2em;
+            color: #051521;
+            position: absolute;
+            opacity: .99;
+            z-index: 100;
+        }
+
+        .alignItemsCenter {
+            align-items: center;
+        }
+
+        .justifyContentSpaceAround {
+            justify-content: space-around;
+        }
+
+        @media screen and (min-width: 1000px) {
+            #links {
+                font-size: 2em;
+                margin-top: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                padding-bottom: 2em;
+                align-content: space-around;
+                width: 100%;
+            }
+            .separator {
+                width: 1em;
+                display: inline;
+            }
+            #links>a {
+                color: #3bbcd8;
+                text-decoration: none;
+                flex: 0 1 auto;
+            }
+        }
+
+        @media screen and (min-width: 500px) and (max-width: 1000px) {
+            #links {
+                width: 100%;
+                font-size: 2em;
+                margin: 1em 2em 0 2em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            #links>a:nth-child(even) {
+                color: #3bbcd8;
+                text-decoration: none;
+                flex: 0 1 auto;
+                width: 40%;
+                text-align: right;
+            }
+            #links>a:nth-child(odd) {
+                color: #3bbcd8;
+                text-decoration: none;
+                flex: 0 1 auto;
+                width: 40%;
+                text-align: left;
+            }
+            #connect {
+                flex: 1 1 2em !important;
+                justify-content: space-evenly;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            #links {
+                padding-top: 2em;
+                font-size: 2em;
+                margin-top: 3em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .separator {
+                display: none;
+            }
+            #links>a {
+                color: #3bbcd8;
+                text-decoration: none;
+                flex: 0 1 auto;
+                width: 50%;
+                text-align: center;
+            }
+        }
+
+        #connect {
+            width: 100%;
+            padding-bottom: 5.5em;
+            z-index: 120;
+        }
+
+        #connect>a {
+            display: flex;
+            flex-basis: 2em;
+        }
+
+        #connect>a>div {
+            flex-basis: 2em;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        /*special thaks to https://www.iconfinder.com/iconsets/rcons-social*/
+    </style>
+</head>
+
+<body>
+    <div id="mainContainer" class="rowContainer alignItemsCenter">
+        <header class="row2em">karmuazine</header>
+        <main id="links" class="row alignItemsCenter justifyContentSpaceAround">
+            <a href="//music.apple.com/us/artist/karmuazine/id1075595122">Apple Music</a>
+            <a href="//play.google.com/store/music/artist/Karmuazine?id=Abl6h4334jny5ej45qnifdyji2y">Google Play</a>
+            <a href="//music.youtube.com/channel/UC9JzOOkEQt3h7KaEIDskBgA">YouTube Music</a>
+            <a href="//music.yandex.ru/artist/4121402">Yandex Music</a>
+            <a href="//open.spotify.com/artist/5fY7eSiZGf9yXH7jRKPnI5">Spotify</a>
+            <a href="//soundcloud.com/karmuazine">SoundCloud</a>
+            <a href="//karmuazine.bandcamp.com/">Bandcamp</a>
+        </main>
+        <footer id="connect" class="row2em columnContainer justifyContentSpaceAround">
+            <a href="//facebook.com/Karmuazine/"><img alt="facebook" src="images/if_facebook_fb_social_social_media_279409.svg" /></a>
+            <a href="//vk.com/karmuazine"><img alt="vk" src="images/if_vkontakte_279378.svg" /></a>
+            <a href="//www.instagram.com/karmuazine/"><img alt="instagram" src="images/iconfinder_instagram_279372.svg" /></a>
+            <a href="mailto:karmuazine@mail.ru"><img alt="mail" src="images/if_mail_1016074.svg" /></a>
+        </footer>
+    </div>
+    <div id="bg"></div>
+    <div id="girl"></div>
+    <div id="topLight"></div>
+    <div id="bottom"></div>
+    <div id="stars"></div>
+    <script>
+        var ticking = false;
+        var topLight = document.getElementById('topLight');
+        var bottom = document.getElementById('bottom');
+        var stars = document.getElementById('stars');
+
+        function getScrollPercent() {
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scroll = (document.documentElement.scrollTop == document.body.scrollTop) ? document.documentElement.scrollTop : document.documentElement.scrollTop + document.body.scrollTop;
+
+            if (scroll < 0) {
+                return 0
+            }
+            if (scroll >= height) {
+                return 100
+            }
+            return Math.round((scroll * 100) / height);
+        }
+
+
+        function setValue() {
+            topLight.style.opacity = getScrollPercent() / 100;
+            bottom.style.opacity = getScrollPercent() / 100;
+            stars.style.top = 100 - getScrollPercent() + "%";
+        }
+
+        window.addEventListener('scroll', function(e) {
+            last_known_scroll_position = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    setValue();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-90333196-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
